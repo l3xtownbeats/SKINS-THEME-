@@ -113,7 +113,7 @@ void PPGUStageLookAndFeel::drawButtonText(juce::Graphics& g, juce::TextButton& b
                  : hovered ? PPGUSkinManager::textPrimary()
                            : PPGUSkinManager::textSecondary();
     g.setColour(colour);
-    g.setFont(juce::Font(juce::FontOptions(11.0f, juce::Font::bold)));
+    g.setFont(juce::Font(11.0f, juce::Font::bold));
     g.drawFittedText(button.getButtonText(), button.getLocalBounds().reduced(4),
                      juce::Justification::centred, 2);
 }
