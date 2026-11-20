@@ -1,0 +1,32 @@
+{
+  "contract_version": "1.0.0",
+  "status": "locked_existing_ids_only",
+  "controls": [
+    {"label":"GAIN","id":"ampGain"},
+    {"label":"TREBLE","id":"eqHigh"},
+    {"label":"MID","id":"eqMid"},
+    {"label":"BASS","id":"eqLow"},
+    {"label":"VELOCITY","id":"velocity"},
+    {"label":"DYNAMICS","id":"dynamics"},
+    {"label":"SWING","id":"swing"},
+    {"label":"HUMANIZE","id":"humanize"},
+    {"label":"ACCENT","id":"accent"}
+  ],
+  "fx": [
+    {"label":"Compressor","id":"compressorOn"},
+    {"label":"EQ","id":"eqOn"},
+    {"label":"Distortion","id":"distortionOn"},
+    {"label":"Chorus","id":"chorusOn"},
+    {"label":"Delay","id":"delayOn"},
+    {"label":"Reverb","id":"reverbOn"},
+    {"label":"Cabinet IR","id":"cabinetOn"}
+  ],
+  "forbidden_changes": [
+    "renaming APVTS IDs",
+    "creating duplicate APVTS parameters",
+    "changing ranges/defaults/choices",
+    "changing MIDI mapping",
+    "changing DSP or audio callback",
+    "adding FLANGER to the seven primary FX switches"
+  ]
+}
