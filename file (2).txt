@@ -1,0 +1,12 @@
+NEON_STAGE_MANAGER/
+│
+├── ASSET_MANIFEST.json         # Созданный нами манифест
+├── main_app.py                 # Главный исполняемый скрипт
+│
+└── NEON_STAGE_ASSETS/
+    ├── Buttons/
+    │   └── neon_stage_buttons_sheet.png
+    ├── Knobs/
+    │   └── neon_stage_knobs_sheet.png
+    └── Meters/
+        └── neon_stage_meters_sheet.png

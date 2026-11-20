@@ -1,0 +1,23 @@
+NEON_STAGE_ASSETS/
+├── ASSET_MANIFEST.json
+├── Icons/                     # Сгенерированный набор иконок (Artifact: neon_stage_icons_sheet)
+│   └── neon_stage_icons_sheet.png
+├── Panels/                    # Графитовые подложки и неоновые рамки
+│   ├── panel_fx_edit.png
+│   ├── panel_autochords.png
+│   ├── panel_settings.png
+│   └── panel_header_bar.png
+├── Buttons/                   # Состояния кнопок (Normal, Hover, Pressed, Active, Disabled)
+│   ├── btn_rect_cyan/
+│   ├── btn_rect_purple/
+│   └── btn_tab/
+├── Knobs/                     # Металлические регуляторы
+│   ├── knob_cap_metal.png     # Фрезерованная металлическая головка
+│   ├── knob_ring_cyan.png     # Неоновое кольцо со шкалой
+│   └── knob_ring_purple.png
+├── Switches/                  # Переключатели ON/OFF
+│   ├── toggle_on.png
+│   └── toggle_off.png
+└── Displays/                  # Дисплеи и сетки графиков
+    ├── display_grid_compressor.png
+    └── vu_meter_strip.png
