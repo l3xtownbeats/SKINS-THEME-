@@ -7,57 +7,131 @@
     "skin_id": "skin-053",
     "registry_index": 53,
     "layout_family": "STUDIO_CONSOLE",
-    "default_mode": "MINIMAL",
+    "default_layout_density": "STANDARD",
     "status": "integration_scaffold"
   },
   "palette": {
-    "window_bg":"#080B14","panel":"#101827","panel_elevated":"#17243A",
-    "control_bg":"#0C1422","control_face":"#1A2940","control_border":"#31506F",
-    "text_primary":"#F4F7FF","text_secondary":"#B5C4DC","text_disabled":"#71829D",
-    "accent":"#00D9FF","accent_glow":"#6B8CFF","danger":"#FF557A",
-    "warning":"#FFBE55","success":"#42E6B0","lcd_bg":"#050D1B",
-    "lcd_text":"#8DEBFF","led_on":"#00E5FF","led_off":"#263B55",
-    "shadow":"#03060B","highlight":"#8DCBFF","lowlight":"#080F1B"
+    "window_bg": "#09090D",
+    "panel": "#15151B",
+    "panel_elevated": "#202027",
+    "control_bg": "#101015",
+    "control_face": "#292932",
+    "control_border": "#77717F",
+    "text_primary": "#F4F1F5",
+    "text_secondary": "#BEB8C3",
+    "text_disabled": "#716B76",
+    "accent": "#D12B8A",
+    "accent_glow": "#9146D8",
+    "purple": "#8A4DE8",
+    "crimson": "#E43D58",
+    "danger": "#E43D58",
+    "warning": "#F2B544",
+    "success": "#55C78A",
+    "lcd_bg": "#09070D",
+    "lcd_text": "#F3D6EA",
+    "led_on": "#D12B8A",
+    "led_off": "#39313C",
+    "shadow": "#030305",
+    "highlight": "#D6D0D8",
+    "lowlight": "#111116"
   },
-  "layout":["TopHeaderBar","AutoChordsFretboard","FXEditModule","AmpToneModule","FullFXChainBar","NeonPianoKeyboard"],
-  "controls":[
-    {"label":"GAIN","parameter_id":"ampGain"},{"label":"TREBLE","parameter_id":"eqHigh"},
-    {"label":"MID","parameter_id":"eqMid"},{"label":"BASS","parameter_id":"eqLow"},
-    {"label":"VELOCITY","parameter_id":"velocity"},{"label":"DYNAMICS","parameter_id":"dynamics"},
-    {"label":"SWING","parameter_id":"swing"},{"label":"HUMANIZE","parameter_id":"humanize"},
-    {"label":"ACCENT","parameter_id":"accent"}
+  "layout": [
+    "TopHeaderBar",
+    "AutoChordsFretboard",
+    "FXEditModule",
+    "AmpToneModule",
+    "FullFXChainBar",
+    "NeonPianoKeyboard"
   ],
-  "fx_switches":[
-    {"label":"Compressor","parameter_id":"compressorOn"},{"label":"EQ","parameter_id":"eqOn"},
-    {"label":"Distortion","parameter_id":"distortionOn"},{"label":"Chorus","parameter_id":"chorusOn"},
-    {"label":"Delay","parameter_id":"delayOn"},{"label":"Reverb","parameter_id":"reverbOn"},
-    {"label":"Cabinet IR","parameter_id":"cabinetOn"}
+  "controls": [
+    {"label": "GAIN", "parameter_id": "ampGain"},
+    {"label": "TREBLE", "parameter_id": "eqHigh"},
+    {"label": "MID", "parameter_id": "eqMid"},
+    {"label": "BASS", "parameter_id": "eqLow"},
+    {"label": "VELOCITY", "parameter_id": "velocity"},
+    {"label": "DYNAMICS", "parameter_id": "dynamics"},
+    {"label": "SWING", "parameter_id": "swing"},
+    {"label": "HUMANIZE", "parameter_id": "humanize"},
+    {"label": "ACCENT", "parameter_id": "accent"}
   ],
-  "button_states":["normal","hover","pressed","active","disabled"],
-  "source_assets":[
-    {"path":"Meshy_AI_knob_gain_reference.png","role":"gain_knob_reference","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_buttons_and_switches.png","role":"button_switch_source_sheet","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_buttons_sheet.png","role":"button_source_sheet","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_frames_and_panels.png","role":"panel_frame_source_sheet","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_knobs_and_meters.png","role":"knob_meter_source_sheet","status":"visual_audit_pending","license_status":"not_verified","duplicate_paths":["Meshy_AI_neon_stage_knobs_and_meters (1).png"]},
-    {"path":"Meshy_AI_neon_stage_knobs_sheet.png","role":"knob_source_sheet","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_meters_sheet.png","role":"meter_source_sheet","status":"visual_audit_pending","license_status":"not_verified"},
-    {"path":"Meshy_AI_neon_stage_ui_icons_set.png","role":"icon_source_sheet","status":"visual_audit_pending","license_status":"not_verified"}
+  "fx_switches": [
+    {"label": "Compressor", "parameter_id": "compressorOn"},
+    {"label": "EQ", "parameter_id": "eqOn"},
+    {"label": "Distortion", "parameter_id": "distortionOn"},
+    {"label": "Chorus", "parameter_id": "chorusOn"},
+    {"label": "Delay", "parameter_id": "delayOn"},
+    {"label": "Reverb", "parameter_id": "reverbOn"},
+    {"label": "Cabinet IR", "parameter_id": "cabinetOn"}
   ],
-  "runtime_assets":{
-    "root":"Assets/NEON_STAGE_DEFAULT_SKIN_1",
-    "required":[
-      {"id":"knob_gain_atlas","path":"Knobs/gain_atlas.png","type":"sprite_atlas","status":"not_imported"},
-      {"id":"knob_tone_atlas","path":"Knobs/tone_atlas.png","type":"sprite_atlas","status":"not_imported"},
-      {"id":"button_normal","path":"Buttons/normal.png","type":"image","status":"not_imported"},
-      {"id":"button_hover","path":"Buttons/hover.png","type":"image","status":"not_imported"},
-      {"id":"button_pressed","path":"Buttons/pressed.png","type":"image","status":"not_imported"},
-      {"id":"button_active","path":"Buttons/active.png","type":"image","status":"not_imported"},
-      {"id":"button_disabled","path":"Buttons/disabled.png","type":"image","status":"not_imported"},
-      {"id":"fx_switches","path":"Switches/","type":"state_assets","status":"not_imported"},
-      {"id":"panel_frames","path":"Panels/","type":"image_collection","status":"not_imported"},
-      {"id":"vu_meter","path":"Meters/","type":"image_collection","status":"not_imported"}
+  "button_states": ["normal", "hover", "pressed", "active", "disabled"],
+  "source_assets": [
+    {
+      "path": "Meshy_AI_knob_gain_reference.png",
+      "role": "gain_knob_reference",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_buttons_and_switches.png",
+      "role": "button_switch_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_buttons_sheet.png",
+      "role": "button_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_frames_and_panels.png",
+      "role": "panel_frame_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_knobs_and_meters.png",
+      "role": "knob_meter_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified",
+      "duplicate_paths": ["Meshy_AI_neon_stage_knobs_and_meters (1).png"]
+    },
+    {
+      "path": "Meshy_AI_neon_stage_knobs_sheet.png",
+      "role": "knob_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_meters_sheet.png",
+      "role": "meter_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    },
+    {
+      "path": "Meshy_AI_neon_stage_ui_icons_set.png",
+      "role": "icon_source_sheet",
+      "status": "visual_audit_pending",
+      "license_status": "not_verified"
+    }
+  ],
+  "runtime_assets": {
+    "root": "Assets/NEON_STAGE_DEFAULT_SKIN_1",
+    "required": [
+      {"id": "knob_gain_atlas", "path": "Knobs/gain_atlas.png", "type": "sprite_atlas", "status": "not_imported"},
+      {"id": "knob_tone_atlas", "path": "Knobs/tone_atlas.png", "type": "sprite_atlas", "status": "not_imported"},
+      {"id": "button_normal", "path": "Buttons/normal.png", "type": "image", "status": "not_imported"},
+      {"id": "button_hover", "path": "Buttons/hover.png", "type": "image", "status": "not_imported"},
+      {"id": "button_pressed", "path": "Buttons/pressed.png", "type": "image", "status": "not_imported"},
+      {"id": "button_active", "path": "Buttons/active.png", "type": "image", "status": "not_imported"},
+      {"id": "button_disabled", "path": "Buttons/disabled.png", "type": "image", "status": "not_imported"},
+      {"id": "fx_switches", "path": "Switches/", "type": "state_assets", "status": "not_imported"},
+      {"id": "panel_frames", "path": "Panels/", "type": "image_collection", "status": "not_imported"},
+      {"id": "vu_meter", "path": "Meters/", "type": "image_collection", "status": "not_imported"}
     ]
   },
-  "licensing":{"redistribution_cleared":false,"notes":"Do not bundle source artwork until redistribution rights are verified."}
+  "licensing": {
+    "redistribution_cleared": false,
+    "notes": "Do not bundle source artwork until redistribution rights are verified."
+  }
 }

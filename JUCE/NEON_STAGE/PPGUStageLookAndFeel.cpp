@@ -21,22 +21,24 @@ void PPGUStageLookAndFeel::drawRotarySlider(juce::Graphics& g, int x, int y, int
     const auto radius = diameter * 0.5f;
     const auto angle = startAngle + position * (endAngle - startAngle);
 
-    // Outer shadow, machined rim and cyan halo.
+    // Outer shadow, machined silver rim and approved magenta halo.
     g.setColour(PPGUSkinManager::shadow());
     g.fillEllipse(knob.translated(0.0f, 2.5f));
     g.setColour(PPGUSkinManager::accent().withAlpha(0.13f));
     g.drawEllipse(knob.expanded(2.0f), 3.0f);
-    g.setGradientFill(juce::ColourGradient(juce::Colour(0xff536783), knob.getX(), knob.getY(),
-                                           juce::Colour(0xff101827), knob.getRight(),
-                                           knob.getBottom(), false));
+    g.setGradientFill(juce::ColourGradient(PPGUSkinManager::controlBorder(),
+                                           knob.getX(), knob.getY(),
+                                           PPGUSkinManager::lowlight(),
+                                           knob.getRight(), knob.getBottom(), false));
     g.fillEllipse(knob);
     g.setColour(PPGUSkinManager::highlight().withAlpha(0.8f));
     g.drawEllipse(knob.reduced(1.0f), 1.2f);
 
     auto face = knob.reduced(radius * 0.13f);
-    g.setGradientFill(juce::ColourGradient(juce::Colour(0xff34445c), face.getX(), face.getY(),
-                                           juce::Colour(0xff111a2a), face.getRight(),
-                                           face.getBottom(), false));
+    g.setGradientFill(juce::ColourGradient(PPGUSkinManager::panelElevated(),
+                                           face.getX(), face.getY(),
+                                           PPGUSkinManager::controlBg(),
+                                           face.getRight(), face.getBottom(), false));
     g.fillEllipse(face);
     g.setColour(PPGUSkinManager::controlBorder());
     g.drawEllipse(face, 1.0f);
@@ -59,7 +61,7 @@ void PPGUStageLookAndFeel::drawRotarySlider(juce::Graphics& g, int x, int y, int
     g.strokePath(valueArc, juce::PathStrokeType(3.0f, juce::PathStrokeType::curved,
                                                 juce::PathStrokeType::rounded));
 
-    // Pointer: a slim metallic indicator.
+    // Pointer: a slim machined-silver indicator.
     juce::Path pointer;
     pointer.addRoundedRectangle(-1.7f, -radius * 0.70f, 3.4f, radius * 0.34f, 1.4f);
     g.setColour(PPGUSkinManager::textPrimary());
@@ -81,12 +83,12 @@ void PPGUStageLookAndFeel::drawButtonBackground(juce::Graphics& g, juce::Button&
     // Explicit state priority: Disabled > Pressed > Active > Hover > Normal.
     const bool disabled = !button.isEnabled();
     const bool active = button.getToggleState();
-    const auto bg = disabled ? juce::Colour(0xff101622)
-                  : pressed ? juce::Colour(0xff071a2b)
-                  : active ? juce::Colour(0xff102b40)
-                  : hovered ? juce::Colour(0xff1a2a40)
-                            : juce::Colour(0xff111a29);
-    const auto edge = disabled ? juce::Colour(0xff263246)
+    const auto bg = disabled ? PPGUSkinManager::lowlight()
+                  : pressed ? PPGUSkinManager::controlBg()
+                  : active ? PPGUSkinManager::panel()
+                  : hovered ? PPGUSkinManager::panelElevated()
+                            : PPGUSkinManager::controlFace();
+    const auto edge = disabled ? PPGUSkinManager::ledOff()
                     : (pressed || active) ? PPGUSkinManager::accent()
                     : hovered ? PPGUSkinManager::accentGlow()
                               : PPGUSkinManager::controlBorder();
